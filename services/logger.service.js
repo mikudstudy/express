@@ -1,9 +1,5 @@
 import fs from 'fs'
 
-const logsDir = './logs'
-if (!fs.existsSync(logsDir)) {
-  fs.mkdirSync(logsDir)
-}
 
 //define the time format
 function getTime() {
