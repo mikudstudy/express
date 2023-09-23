@@ -1,5 +1,5 @@
-const logger = require('./logger.service')
-
+import logger from './logger.service.js'
+// import {Socket} from 'socket.io'
 var gIo = null
 
 function setupSocketAPI(http) {
@@ -103,7 +103,7 @@ function _printSocket(socket) {
     console.log(`Socket - socketId: ${socket.id} userId: ${socket.userId}`)
 }
 
-module.exports = {
+export {
     // set up the sockets service and define the API
     setupSocketAPI,
     // emit to everyone / everyone in a specific room (label)

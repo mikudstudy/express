@@ -9,6 +9,7 @@ const allowedOrigins = [
     'https://api.mikudstudy.com',
     'http://localhost:5173',
     'http://127.0.0.1:5174',
+    'http://localhost:8888/',
 ]
 
 function enableCors(req, res, next) {
@@ -18,6 +19,12 @@ function enableCors(req, res, next) {
         res.header('Access-Control-Allow-Headers', 'Content-Type');
         next();
     }
+    else
+    {
+        // console.log(req.headers);
+        next();
+    }
+
 }
 
 export default enableCors;

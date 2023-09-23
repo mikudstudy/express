@@ -1,5 +1,5 @@
-const authService = require('../api/auth/auth.service')
-const logger = require('../services/logger.service')
+import {authService} from '../api/auth/auth.service'
+import logger from '../services/logger.service'
 
 function requireAuth(req, res, next) {
   if (!req?.session?.loginToken) return res.status(401).send('Not Authenticated')
@@ -22,7 +22,7 @@ function requireAdmin(req, res, next) {
 
 // module.exports = requireAuth
 
-module.exports = {
+export  {
   requireAuth,
   requireAdmin
 }
