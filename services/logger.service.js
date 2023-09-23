@@ -1,4 +1,4 @@
-import fs from 'fs'
+// import fs from 'fs'
 
 
 //define the time format
@@ -12,7 +12,7 @@ function doLog(level, ...args) {
   var line = strs.join(' | ')
   line = `${getTime()} - ${level} - ${line}\n`
   console.log(line)
-  fs.appendFileSync('./logs/backend.log', line)
+  // fs.appendFileSync('./logs/backend.log', line)
 }
 
 const logger = {
